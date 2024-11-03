@@ -7,7 +7,7 @@ help:
 install:
 	rm -rf dist
 	poetry build
-	pip install dist/*.whl
+	pip install --break-system-packages --force-reinstall dist/*.whl
 
 format:
 	${POETRY} isort --profile=black mopidy_tidal tests
